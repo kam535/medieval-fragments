@@ -1,0 +1,33 @@
+
+{%- assign items = site.data.[site.metadata]| where_exp: 'item', 'item.dateStart' -%}
+{
+    "title": {
+        "media": {
+          "credit": {{ site.title | jsonify }}
+        },
+        "text": {
+          "headline": {{ site.title | append: ' Timeline' | jsonify }},
+          "text": {{ site.description | jsonify }}
+        }
+    },
+    "events": [
+      {% for item in items %}{% if item.dateStart %}{
+        "media": {
+          "url": "{% if item.youtubeid %}{{ 'https://www.youtube.com/watch?v=' | append: item.youtubeid }}{% elsif item.vimeoid %}{{ 'https://vimeo.com/' | append: item.vimeoid }}{% elsif item.thumbnail contains 'http' %}{{ item.thumbnail }}{% else %}{{ item.thumbnail | prepend: '/site.data[site.metadata]/' | absolute_url }}{% endif %}",
+          "caption": {{ item.label | jsonify }},
+          "link": "{{ site.data.[site.metadata] | absolute_url | append: item.pid }}",
+          "credit": "{{ site.title }}"
+        },
+        "start_date": { {% if item.dateStart contains '-' %}{% assign dates = item.dateStart | split: '-' %}
+          "month": "{{ dates[1] }}",
+          "day": "{{ dates[2] }}",
+          "year": "{{ dates[0] }}"{% elsif item.date contains '/' %}"year": "{{ item.date | strip | split: '/' | last }}"{% else %}
+          "year": "{{ item.date }}"{% endif %}
+        },
+        "text": {
+          "headline": {{ item.label | jsonify }}{% if item.description %},
+          "text": {{ item.description | jsonify }}{% endif %}
+        }
+      }{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+    ]
+}

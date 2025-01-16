@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% comment %}
+  The block below controls the image viewer
+{% endcomment %}
+<h3 alt="{{ page.label | escape }}" class='item-label'>{{ page.label }}</h3>
+  <div class='item-view'>
+    <span class='pagination-link' id='prevlink'></span>
+      <script src="https://www.unpkg.com/@samvera/clover-iiif@latest/dist/web-components/index.umd.js"></script>
+      <clover-viewer 
+        id= {{ "https://kam535.github.io/waxbuilder" | append: page.manifest }}
+        >
+      </clover-viewer>
+    <span class='pagination-link' id='nextlink'></span>
+  </div>
+  {% unless layout.pagination == false %}{% include item_pagination.html %}{% endunless %}
+
+{% comment %}
+  The block below controls the item metadata table
+{% endcomment %}
+
+{% if layout.meta.size %}
+  {% assign metadata = layout.meta %}
+{% elsif page.meta.size %}
+  {% assign metadata = page.meta %}
+{% endif %}
+{% if metadata.size %}
+  {% include item_metadata.html meta=metadata %}
+{% endif %}

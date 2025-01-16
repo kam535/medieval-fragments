@@ -1,0 +1,4 @@
+field,display_name,search
+dateStart,Date,true
+agent,Creator,true
+location,Location,true

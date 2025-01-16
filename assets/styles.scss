@@ -1,0 +1,67 @@
+---
+sitemap: false
+---
+/*
+variable declaration
+*/
+
+/* branding */
+$logo: url("{{ '/img/book.png' | absolute_url }}");
+
+/* text */
+
+$body-font:       'Trirong', 'serif';
+$heading-font:    'Trirong', 'serif';
+
+
+/* Image Size */
+
+$thumbnail-height: 140px;
+$thumbnail-width: 140px;
+
+/* colors */
+
+$text-color:      #100c01;
+$bg-color:        #ffffff;
+$neutral:         #F0D9D2;
+$accent-light:    #A41510;
+$accent-dark:     #640F06;
+
+/* viewport sizes */
+
+$max-width:       800px;
+
+/* margins */
+
+$less-margin:     1.0rem;
+$margin:          1.5rem;
+$more-margin:     2.0rem;
+$super-margin:    3.0rem;
+
+
+$viewer-height:   550px;
+$parallax-height: 350px;
+$footer-height:   250px;
+
+/*
+font & asset import
+*/
+@media (min-width: 576px) {
+    .modal-xxl {
+        max-width:90%
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-xxl {
+        max-width:90%
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xxl {
+        max-width:90%
+    }
+}
+@import url('https://fonts.googleapis.com/css?family=Trirong:300,400,700&font-display=auto');
+@import 'wax';
