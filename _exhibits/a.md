@@ -12,6 +12,9 @@ Nam velit leo, mattis ac dui non, vulputate porttitor sapien. Praesent in alique
 
 
 {% include parallax_image.html collection='medievalfragments' pid='obj16' y='25%' clickable='true' %}
+{% include inline_image.html collection='medievalfragments' pid='obj16' y='25%' clickable='true' %}
+{% include simple_image_viewer.html collection='medievalfragments' pid='obj16' y='25%' clickable='true' %}
+
 
 
 Duis commodo ligula libero, a pharetra ligula posuere sit amet. Sed ipsum dolor, elementum eget nisl eget, sagittis vestibulum augue. Donec tincidunt mauris et nunc sagittis, nec consectetur lorem tristique. Nulla tincidunt magna ut ullamcorper consectetur. Nulla mi urna, feugiat sed massa non, ullamcorper efficitur dolor.[^2] Sed luctus, massa eget pharetra posuere, nibh sem eleifend lectus, lobortis molestie ante libero non metus. Aenean et est sit amet est pulvinar convallis vel non tortor. Nunc semper commodo fringilla. Proin eget metus eget felis faucibus aliquet. Cras ultrices turpis id nibh cursus fringilla. Aenean nec magna turpis. Suspendisse egestas tellus iaculis ante pharetra imperdiet ac at odio.
