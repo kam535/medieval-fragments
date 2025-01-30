@@ -20,7 +20,7 @@
 title:            'Medieval Fragments at Cornell'
 description:      'A minimal collections exhibit platform'
 url:              'https://kam535.github.io'
-baseurl:          '/waxbuilder'
+baseurl:          '/medieval-fragments'
 copyright:        'Cornell University Digital CoLab, 2024'
 logo:             '/img/book.png'
 default_thumb:    '/img/default.png'
