@@ -9,7 +9,7 @@
   },
   "items": [
     {
-      "id": "https://kam535.github.io/canvas/3kboj129ek6-m5h5qsm5",
+      "id": "https://kam535.github.io/canvas/3kboj129ek6-m5h5qsm6",
       "type": "Canvas",
       "label": {
         "en": [
@@ -17,8 +17,10 @@
         ]
       },
       "duration": 39.70612244897959,
+      "height": 3331,
+      "width": 2815,
       "accompanyingCanvas": {
-        "id": "https://kam535.github.io/canvas/qjhif7955zn-m5h6q7i6",
+        "id": "https://kam535.github.io/canvas/qjhif7955zn-m5h6q7i7",
         "type": "Canvas",
         "label": {
           "en": [
@@ -29,11 +31,11 @@
         "width": 2815,
         "items": [
           {
-            "id": "https://kam535.github.io/canvas/76856478y78967fghhxdf",
+            "id": "https://kam535.github.io/canvas/76856478y78967fghhxdf1",
             "type": "AnnotationPage",
             "items": [
               {
-                "id": "https://kam535.github.io/annotation/0sizwbidakmi-m5h6q79l",
+                "id": "https://kam535.github.io/annotation/0sizwbidakmi-m5h6q792",
                 "type": "Annotation",
                 "motivation": "painting",
                 "body": {
@@ -50,7 +52,7 @@
                     }
                   ]
                 },
-                "target": "https://kam535.github.io/canvas/qjhif7955zn-m5h6q7i6"
+                "target": "https://kam535.github.io/canvas/qjhif7955zn-m5h6q7i7"
               }
             ]
           }
@@ -58,11 +60,11 @@
       },    
       "items": [
         {
-          "id": "https://kam535.github.io/canvas/page/67",
+          "id": "https://kam535.github.io/canvas/page/68",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://kam535.github.io/annotation/kul7vcwmf6s-m5h5qsm3",
+              "id": "https://kam535.github.io/annotation/kul7vcwmf6s-m5h5qsm4",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
@@ -71,12 +73,11 @@
                 "duration": 39.70612244897959,
                 "format": "sound/mp3"
               },
-              "target": "https://kam535.github.io/canvas/page/67"
+              "target": "https://kam535.github.io/canvas/page/68"
             }
           ]
         }
-      ]
-    },
+      ],
     "rendering": [
         {
           "id": "https://kam535.github.io/medieval-fragments/img/derivatives/obj24/fatihah.txt",
@@ -87,6 +88,8 @@
             ]
           },
           "format": "text/plain"
+        }
       ]
+    }
   ]
 }
