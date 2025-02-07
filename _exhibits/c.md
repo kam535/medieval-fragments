@@ -23,13 +23,13 @@ permalink: /exhibits/c/
       player.load(audioSrc);
       element.onclick = function () {
         var audio_clip = get(audioSrc)
-          if(audio_clip.paused);
+          if(audio_clip.play);
           {
-            audio_clip.play();
+            audio_clip.paused();
           }
           else
           {
-            audio_clip.paused();
+            audio_clip.play();
           }
       }
   </script>
