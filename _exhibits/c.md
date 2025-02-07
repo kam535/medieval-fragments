@@ -29,7 +29,7 @@ permalink: /exhibits/c/
           }
           else
           {
-            audio_clip.pause();
+            audio_clip.paused();
           }
       }
   </script>
