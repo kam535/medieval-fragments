@@ -12,7 +12,7 @@ permalink: /exhibits/c/
   </head>
   <body>
 
-  <a href="#" data-audio-src="file1.mp3">Text 1</a>
+  <a href="#" data-audio-src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3">Text 1</a>
   <a href="#" data-audio-src="file2.mp3">Text 2</a>
   <a href="#" data-audio-src="file3.mp3">Text 3</a>
 
