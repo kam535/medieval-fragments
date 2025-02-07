@@ -25,7 +25,13 @@ permalink: /exhibits/c/
       element.onclick = function () {
       player.get(audioSrc).play();
       }
-    }  
+    }
+    
+    function stopAudio(audio) {
+    audio.pause();
+    audio.currentTime = 0;
+}
+    element.onClick = stopAudio(audio);
   </script>
   </body>
 </html>
