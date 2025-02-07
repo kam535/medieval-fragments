@@ -9,6 +9,7 @@ permalink: /exhibits/c/
   <head>
     <title>Clover IIIF - Viewer - Web Component</title>
     <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
   <script type="text/javascript">
