@@ -8,25 +8,27 @@ permalink: /exhibits/c/
 <html>
   <head>
     <meta charset="UTF-8" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://gustavgenberg.github.io/handy-front-end/SoundPlayer.js"></script>
   </head>
   <body>
-    <script type="text/javascript">
-      $("[data-audio-url]").each(
-        function(){
-          $(this).on('click', function() {
-              var mp3Url = $(this).attr('data-audio-url');
-              var a = new Audio(mp3Url);
-              a.play();
-          });
-      }
-  );
-  <span data-audio-url="mp3_file_1.mp3">Text1</span>
-  <span data-audio-url="mp3_file_2.mp3">Text2</span>
-  <span data-audio-url="mp3_file_3.mp3">Text3</span>
-    </script>
 
+  <a href="#" data-audio-src="file1.mp3">Text 1</a>
+  <a href="#" data-audio-src="file2.mp3">Text 2</a>
+  <a href="#" data-audio-src="file3.mp3">Text 3</a>
+
+<script>
+const player = new SoundPlayer();
+const elements = document.querySelectorAll('[data-audio-src]');
+for(let element of elements) {
+  const audioSrc = element.getAttribute('data-audio-src');
+  player.load(audioSrc);
+  element.onclick = function () {
+    player.get(audioSrc).play();
+  }
+}
+</script>
   </body>
 </html>
+
 
 An exhibit is just a page written in Markdown (or HTML, or both). You can put whatever you want on here.
