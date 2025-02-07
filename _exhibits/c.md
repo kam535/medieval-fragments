@@ -11,10 +11,23 @@ permalink: /exhibits/c/
     <meta charset="UTF-8" />
   </head>
   <body>
-    <script src="https://www.unpkg.com/@samvera/clover-iiif@latest/dist/web-components/index.umd.js"></script>
-    <clover-viewer
-      id="https://api.dc.library.northwestern.edu/api/v2/works/8a833741-74a8-40dc-bd1d-c416a3b1bb38?as=iiif"
-    />
+  <script type="text/javascript">
+  $("[data-audio-url]").each(
+      function(){
+          $(this).on('click', function() {
+              var mp3Url = $(this).attr('data-audio-url');
+              var a = new Audio(mp3Url);
+              a.play();
+          });
+      }
+  );
+  
+  </script>
+
+  <span data-audio-url="mp3_file_1.mp3">Text1</span>
+  <span data-audio-url="mp3_file_2.mp3">Text2</span>
+  <span data-audio-url="mp3_file_3.mp3">Text3</span>
+
   </body>
 </html>
 
