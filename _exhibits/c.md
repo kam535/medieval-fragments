@@ -22,15 +22,17 @@ permalink: /exhibits/c/
       const audioSrc = element.getAttribute('data-audio-src');
       player.load(audioSrc);
       element.onclick = function () {
-      player.get(audioSrc).play();
+        var audio_clip = get(audioSrc)
+          if(audio_clip.paused);
+          {
+            audio_clip.play();
+          }
+          else
+          {
+            audio_clip.pause();
+          }
       }
-    }
-    
-    function stopAudio(audio) {
-    audio.pause();
-    audio.currentTime = 0;
-}
-    element.onClick = stopAudio(audio);
   </script>
+  
   </body>
 </html>
