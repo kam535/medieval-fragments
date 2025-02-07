@@ -8,7 +8,7 @@ permalink: /exhibits/c/
 <html>
   <head>
     <meta charset="UTF-8" />
-    <script src="https://gustavgenberg.github.io/handy-front-end/SoundPlayer.js"/>
+    <script src="https://gustavgenberg.github.io/handy-front-end/SoundPlayer.js"></script>
   </head>
   <body>
 
