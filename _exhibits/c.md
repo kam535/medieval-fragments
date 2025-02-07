@@ -7,14 +7,13 @@ permalink: /exhibits/c/
 ---
 <html>
   <head>
-    <title>Clover IIIF - Viewer - Web Component</title>
     <meta charset="UTF-8" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
-  <script type="text/javascript">
-  $("[data-audio-url]").each(
-      function(){
+    <script type="text/javascript">
+      $("[data-audio-url]").each(
+        function(){
           $(this).on('click', function() {
               var mp3Url = $(this).attr('data-audio-url');
               var a = new Audio(mp3Url);
@@ -22,12 +21,10 @@ permalink: /exhibits/c/
           });
       }
   );
-  
-  </script>
-
   <span data-audio-url="mp3_file_1.mp3">Text1</span>
   <span data-audio-url="mp3_file_2.mp3">Text2</span>
   <span data-audio-url="mp3_file_3.mp3">Text3</span>
+    </script>
 
   </body>
 </html>
