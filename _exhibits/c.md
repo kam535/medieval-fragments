@@ -16,17 +16,17 @@ permalink: /exhibits/c/
   <a href="#" data-audio-src="file2.mp3">Text 2</a>
   <a href="#" data-audio-src="file3.mp3">Text 3</a>
 
-<script>
-const player = new SoundPlayer();
-const elements = document.querySelectorAll('[data-audio-src]');
-for(let element of elements) {
-  const audioSrc = element.getAttribute('data-audio-src');
-  player.load(audioSrc);
-  element.onclick = function () {
-    player.get(audioSrc).play();
-  }
-}
-</script>
+  <script>
+    const player = new SoundPlayer();
+    const elements = document.querySelectorAll('[data-audio-src]');
+    for(let element of elements) {
+      const audioSrc = element.getAttribute('data-audio-src');
+      player.load(audioSrc);
+      element.onclick = function () {
+      player.get(audioSrc).play();
+      }
+    }  
+  </script>
   </body>
 </html>
 
