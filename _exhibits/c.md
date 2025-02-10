@@ -97,7 +97,6 @@ permalink: /exhibits/c/
   </span>
 </div>
 <script>
-
 function myFunction() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
@@ -105,12 +104,12 @@ function myFunction() {
   const elements = document.querySelectorAll('[data-audio-src]');
   for(let element of elements) {
     const audioSrc = element.getAttribute('data-audio-src');
-    player.load(audioSrc);
-    element.onClick = function () {
-    player.get(audioSrc).play();
+      player.load(audioSrc);
+      element.onclick = function () {
+        player.get(audioSrc).play();
+      }
     }
   }
-}
 </script>
 </div>
 </body>
