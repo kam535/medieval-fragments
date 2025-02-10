@@ -80,6 +80,27 @@ This is a sample sentence that illustrates the capacity for hypertext. Click on 
         }
   </script>
 </div>
+<br>
+<div>
+<script>
+var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+function togglePlay() {
+  isPlaying ? myAudio.pause() : myAudio.play();
+};
+
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+  <div>
+  <audio id="myAudio" src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3" preload="auto"></audio>
+  <button onClick="togglePlay()">Click here to hear.</button>
+  </div>
+  </script>
+</div>
 
 <div style="text-align:center">
 <h2>Popup</h2>
