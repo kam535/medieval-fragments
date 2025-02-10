@@ -74,9 +74,14 @@ permalink: /exhibits/c/
     const elements = document.querySelectorAll('[data-audio-src]');
     for(let element of elements) {
       const audioSrc = element.getAttribute('data-audio-src');
-      const sound = player.load(audioSrc);
-      element.onClick = function () {
-          sound.play(0,40);
+      player.load(audioSrc);
+      element.onclick = function () {
+          player.get(audioSrc);
+          if (player.isPlaying == true) {
+            player.pause();
+          else {
+            player.play();
+      }
     }
   }
   </script>
