@@ -64,10 +64,10 @@ permalink: /exhibits/c/
 }
 </style>
   </head>
-  <body>
-
-X This is a sample sentence that illutsrates the capacity for hypertext. Click on the highlighted text, like this <a href="#" data-audio-src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3">recitation of Surah al Faithah</a> to hear the audio. Click on the highlighted/bolded text to hear a <a href="#" data-audio-src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/002.mp3">recitation of Surah al Bakarah</a>.
-
+<body>
+  
+<div>
+This is a sample sentence that illustrates the capacity for hypertext. Click on the highlighted text, like this <a href="#" data-audio-src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3">recitation of Surah al Faithah</a> to hear the audio. Click on the highlighted/bolded text to hear a <a href="#" data-audio-src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/002.mp3">recitation of Surah al Bakarah</a>.
  <script>
     const player = new SoundPlayer();
     const elements = document.querySelectorAll('[data-audio-src]');
@@ -79,10 +79,34 @@ X This is a sample sentence that illutsrates the capacity for hypertext. Click o
       }
     }
   </script>
+</div>
+
+<div>
+<script>
+function playSound(sound) {
+  var song = document.querySelectorAll('[goog-data-audio-src]');
+  song.volume = .25; // setting the volume to 25% because the sound is loud
+  if (song.paused) {  // if song1 is paused
+    song.play();
+  } else {
+    song.pause();
+  }
+}
+</script>
+This is a sample sentence that illustrates the capacity for hypertext. Click on the highlighted text, like this
+<audio id="sound">
+  <source src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3" type="audio/mp3">
+</audio>
+<text onclick="playSound('sound')">recitation of Surah al Faithah</text>
+to hear the audio. Click on the highlighted/bolded text to hear a
+<audio id="sound2">
+  <source src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/002.mp3" type="audio/mp3">
+</audio>
+<text onclick="playSound('sound2')">recitation of Surah al Bakarah</text>
+</div>
+
 <div style="text-align:center">
-
 <h2>Popup</h2>
-
 <div class="popup" onclick="myFunction()">Click me to toggle the popup!
   <span class="popuptext" id="myPopup">
   A Simple Popup!
@@ -96,5 +120,6 @@ function myFunction() {
   }
 </script>
 </div>
+
 </body>
 </html>
