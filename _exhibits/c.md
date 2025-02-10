@@ -75,15 +75,7 @@ This is a sample sentence that illustrates the capacity for hypertext. Click on 
       const audioSrc = element.getAttribute('data-audio-src');
       player.load(audioSrc);
       element.onclick = function () {
-          player.get(audioSrc).play();
-          var isPlaying = true;
-          if (!isPlaying){
-            isPlaying = true;
-             player.get(audioSrc).play();
-          } 
-          else {
-            isPlaying = false;
-                player.get(audioSrc).pause();
+          player.get(audioSrc).play(0,5);
             }
           }
         }
