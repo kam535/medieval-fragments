@@ -95,11 +95,11 @@ myAudio.onplaying = function() {
 myAudio.onpause = function() {
   isPlaying = false;
 };
+  </script>
   <div>
   <audio id="myAudio" src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3" preload="auto"></audio>
   <button onClick="togglePlay()">Click here to hear.</button>
   </div>
-  </script>
 </div>
 
 <div style="text-align:center">
