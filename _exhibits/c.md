@@ -75,17 +75,17 @@ permalink: /exhibits/c/
     for(let element of elements) {
       const audioSrc = element.getAttribute('data-audio-src');
       player.load(audioSrc);
-      element.onclick = function () {
-          player.get(audioSrc);
-          if (player.isPlaying == true) {
+      element.onClick = function () {
+          player.get(audioSrc).play();
+    }
+  }
+  </script>
+<!--    if (player.isPlaying == true) {
             player.pause();
           else {
             player.play();
       }
-    }
-  }
-  </script>
-
+      -->
 <div style="text-align:center">
 
 <h2>Popup</h2>
