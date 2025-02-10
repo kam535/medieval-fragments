@@ -107,7 +107,7 @@ function myFunction() {
     const audioSrc = element.getAttribute('data-audio-src');
     player.load(audioSrc);
     element.onClick = function () {
-     player.get(audioSrc).play();
+    player.get(audioSrc).play();
     }
   }
 }
