@@ -15,17 +15,16 @@ permalink: /exhibits/c/
   This is a sample sentence that illutsrates the capacity for hypertext. Click on the highlighted text, like this <a href="#" data-audio-src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3">recitation of Surah al Faithah</a> to hear the audio.
   Click on the highlighted/bolded text to hear a <a href="#" data-audio-src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/002.mp3">recitation of Surah al Bakarah</a>.
 
-  <script>
+ <script>
     const player = new SoundPlayer();
     const elements = document.querySelectorAll('[data-audio-src]');
     for(let element of elements) {
       const audioSrc = element.getAttribute('data-audio-src');
       player.load(audioSrc);
-      element.onClick = function () {
-        var audio_clip = get(audioSrc)
-            audio_clip.play();
+      element.onclick = function () {
+      player.get(audioSrc).play();
       }
+    }
   </script>
-  
   </body>
 </html>
