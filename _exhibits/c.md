@@ -77,30 +77,15 @@ This is a sample sentence that illustrates the capacity for hypertext. Click on 
       element.onclick = function () {
           player.get(audioSrc).play(0,5);
           }
-        }
+      element.ondblclick = function () {
+        player.pause();
+        sound.pause();
+      }
+    }
   </script>
 </div>
 <br>
-<div>
-<script>
-var myAudio = document.getElementById("myAudio");
-var isPlaying = false;
-function togglePlay() {
-  isPlaying ? myAudio.pause() : myAudio.play();
-};
 
-myAudio.onplaying = function() {
-  isPlaying = true;
-};
-myAudio.onpause = function() {
-  isPlaying = false;
-};
-  </script>
-  <div>
-  <audio id="myAudio" src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3" preload="auto"></audio>
-  <button onClick="togglePlay()">Click here to hear.</button>
-  </div>
-</div>
 
 <div style="text-align:center">
 <h2>Popup</h2>
