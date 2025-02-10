@@ -75,11 +75,11 @@ X This is a sample sentence that illustrates the capacity for hypertext. Click o
       player.load(audioSrc);
       element.onclick = function () {
           player.get(audioSrc).play();
-          }
-      element.ondblclick = function () {
+          };
+      element.onmouseover = function () {
         player.pause();
         sound.pause();
-      }
+      };
     }
   </script>
 </div>
