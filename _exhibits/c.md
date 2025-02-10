@@ -9,6 +9,64 @@ permalink: /exhibits/c/
   <head>
     <meta charset="UTF-8" />
     <script src="https://gustavgenberg.github.io/handy-front-end/SoundPlayer.js"></script>
+    <style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
   </head>
   <body>
 
@@ -22,9 +80,32 @@ permalink: /exhibits/c/
       const audioSrc = element.getAttribute('data-audio-src');
       player.load(audioSrc);
       element.onclick = function () {
-      player.get(audioSrc).play();
+        if (player.paused) {
+          player.get(audioSrc).play();
       }
+        else {
+          player.pause();
     }
+  }
   </script>
-  </body>
+
+<div style="text-align:center">
+
+<h2>Popup</h2>
+
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">
+  A Simple Popup!
+  <img src="https://www.gravatar.com/avatar/995b3dfe123b57347bd3d6e29b986dea?s=64&d=identicon&r=PG&f=y&so-version=2">
+  </span>
+</div>
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+</div>
+</body>
 </html>
