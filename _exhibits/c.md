@@ -75,7 +75,7 @@ permalink: /exhibits/c/
     for(let element of elements) {
       const audioSrc = element.getAttribute('data-audio-src');
       player.load(audioSrc);
-      element.onClick = function () {
+      element.onclick = function () {
           player.get(audioSrc).play();
     }
   }
