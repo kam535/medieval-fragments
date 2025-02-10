@@ -76,35 +76,18 @@ This is a sample sentence that illustrates the capacity for hypertext. Click on 
       player.load(audioSrc);
       element.onclick = function () {
           player.get(audioSrc).play();
-      }
-    }
+          var isPlaying = true;
+          if (!isPlaying){
+            isPlaying = true;
+             player.get(audioSrc).play();
+          } 
+          else {
+            isPlaying = false;
+                player.get(audioSrc).pause();
+            }
+          }
+        }
   </script>
-</div>
-
-<br>
-
-<div>
-<script>
-function playSound(sound) {
-  var song = document.querySelectorAll('[goog-data-audio-src]');
-  song.volume = .25; // setting the volume to 25% because the sound is loud
-  if (song.paused) {  // if song1 is paused
-    song.play();
-  } else {
-    song.pause();
-  }
-}
-</script>
-This is a sample sentence that illustrates the capacity for hypertext. Click on the highlighted text, like this
-<audio id="sound">
-  <source src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3" type="audio/mp3">
-</audio>
-<button onclick="playSound('sound')">**recitation of Surah al Faithah**</button>
-to hear the audio. Click on the highlighted/bolded text to hear a
-<audio id="sound2">
-  <source src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/002.mp3" type="audio/mp3">
-</audio>
-<button onclick="playSound('sound2')">**recitation of Surah al Bakarah**</button>
 </div>
 
 <div style="text-align:center">
