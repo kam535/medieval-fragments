@@ -81,6 +81,8 @@ This is a sample sentence that illustrates the capacity for hypertext. Click on 
   </script>
 </div>
 
+<br>
+
 <div>
 <script>
 function playSound(sound) {
@@ -97,12 +99,12 @@ This is a sample sentence that illustrates the capacity for hypertext. Click on 
 <audio id="sound">
   <source src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3" type="audio/mp3">
 </audio>
-<text onclick="playSound('sound')">recitation of Surah al Faithah</text>
+<text onclick="playSound('sound')">**recitation of Surah al Faithah**</text>
 to hear the audio. Click on the highlighted/bolded text to hear a
 <audio id="sound2">
   <source src="https://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/002.mp3" type="audio/mp3">
 </audio>
-<text onclick="playSound('sound2')">recitation of Surah al Bakarah</text>
+<text onclick="playSound('sound2')">**recitation of Surah al Bakarah**</text>
 </div>
 
 <div style="text-align:center">
