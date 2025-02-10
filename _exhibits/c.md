@@ -10,7 +10,7 @@ permalink: /exhibits/c/
     <meta charset="UTF-8" />
     <script src="https://gustavgenberg.github.io/handy-front-end/SoundPlayer.js"></script>
     <style>
-/* Popup container - can be anything you want */
+
 .popup {
   position: relative;
   display: inline-block;
@@ -21,7 +21,6 @@ permalink: /exhibits/c/
   user-select: none;
 }
 
-/* The actual popup */
 .popup .popuptext {
   visibility: hidden;
   width: 160px;
@@ -37,7 +36,6 @@ permalink: /exhibits/c/
   margin-left: -80px;
 }
 
-/* Popup arrow */
 .popup .popuptext::after {
   content: "";
   position: absolute;
@@ -49,14 +47,12 @@ permalink: /exhibits/c/
   border-color: #555 transparent transparent transparent;
 }
 
-/* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
 
-/* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
   to {opacity: 1;}
