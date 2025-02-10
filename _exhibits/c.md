@@ -80,12 +80,6 @@ permalink: /exhibits/c/
     }
   }
   </script>
-<!--    if (player.isPlaying == true) {
-            player.pause();
-          else {
-            player.play();
-      }
-      -->
 <div style="text-align:center">
 
 <h2>Popup</h2>
