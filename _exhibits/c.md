@@ -76,11 +76,6 @@ X This is a sample sentence that illutsrates the capacity for hypertext. Click o
       player.load(audioSrc);
       element.onclick = function () {
           player.get(audioSrc).play();
-          if (audioSrc.isPlaying = true) {
-            player.get(audioSrc).pause();
-          } else {
-            player.get(audioSrc).play();
-        } 
       }
     }
   </script>
