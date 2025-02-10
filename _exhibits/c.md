@@ -75,13 +75,14 @@ permalink: /exhibits/c/
     for(let element of elements) {
       const audioSrc = element.getAttribute('data-audio-src');
       player.load(audioSrc);
-      element.onclick = function () {
+      element.onClick = function () {
         if (player.paused) {
           player.get(audioSrc).play();
       }
         else {
           player.pause();
     }
+  }
   }
   </script>
 
