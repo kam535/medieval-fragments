@@ -76,11 +76,11 @@ permalink: /exhibits/c/
       const audioSrc = element.getAttribute('data-audio-src');
       const sound = player.load(audioSrc);
       element.onClick = function () {
-        if (sound.paused) {
-          sound.play();
+        if (sound.play) {
+          sound.pause();
       }
         else {
-          sound.pause();
+          sound.play();
     }
   }
   }
