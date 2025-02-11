@@ -31,3 +31,5 @@ collection: medievalfragments
 thumbnail: "/img/derivatives/simple/obj1/thumbnail.jpg"
 full: "/img/derivatives/simple/obj1/fullwidth.jpg"
 ---
+
+{% include gallery.html collection='medievalfragments' facet_by='label|originalwork|worktype|' num_column=4 %}
