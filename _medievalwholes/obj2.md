@@ -16,5 +16,7 @@ citeas: 'Medieval Manuscript Fragments #6532. Division of Rare and Manuscript Co
 repository: Division of Rare and Manuscript Collections_Cornell University Library
 order: '1'
 collection: medievalwholes
+thumbnail: '/img/derivatives/simple/medievalwholes/obj2/thumbnail.jpg'
+full: '/img/derivatives/simple/medievalwholes/obj2/fullwidth.jpg'
 layout: medfrag_item
 ---
