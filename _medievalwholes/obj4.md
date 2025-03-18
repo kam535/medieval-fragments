@@ -13,5 +13,7 @@ originalwork: ''
 repository: Division of Rare and Manuscript Collections_Cornell University Library
 order: '3'
 collection: medievalwholes
+thumbnail: '/img/derivatives/simple/medievalwholes/obj4/thumbnail.jpg'
+full: '/img/derivatives/simple/medievalwholes/obj4/fullwidth.jpg'
 layout: medfrag_item
 ---
