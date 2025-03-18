@@ -18,5 +18,6 @@ repository: Division of Rare and Manuscript Collections_Cornell University Libra
 order: '0'
 collection: medievalwholes
 thumbnail: '/img/derivatives/simple/medievalwholes/obj1/thumbnail.jpg'
+whole: '/img/derivatives/simple/medievalwholes/obj1/fullwidth.jpg'
 layout: medfrag_item
 ---
