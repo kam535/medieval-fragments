@@ -9,7 +9,7 @@ catalogrecord: '3978609'
 worktype: manuscript
 materials: vellum, ink, parchment
 tTags: Schoolbook
-originalwork: 'From Manuscript to Print: the Evolution of the Medieval Book'
+originalwork: ''
 repository: Division of Rare and Manuscript Collections_Cornell University Library
 order: '4'
 collection: medievalwholes
