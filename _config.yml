@@ -67,6 +67,13 @@ collections:
       source: 'medievalfragments.csv' # path to the metadata file within `_data`
     images:
       source: 'raw_images/medfragments' # path to the directory of images within `_data`
+  medievalwholes:
+    output: true
+    layout: 'medfrag_item'
+    metadata:
+      source: 'medievalwholes.csv'
+    images:
+      source: 'raw_images/medwholes'
 
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
