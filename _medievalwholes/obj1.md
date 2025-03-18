@@ -18,6 +18,6 @@ repository: Division of Rare and Manuscript Collections_Cornell University Libra
 order: '0'
 layout: medfrag_item
 collection: medievalwholes
-thumbnail: https://kam535.github.io/medieval-fragments/img/derivatives/simple/medievalwholes/obj1/thumbnail.jpg
+thumbnail: /img/derivatives/simple/medievalwholes/obj1/thumbnail.jpg
 full: /img/derivatives/simple/medievalwholes/obj1/fullwidth.jpg
 ---
