@@ -11,7 +11,7 @@ collectionnum: '6532'
 worktype: manuscript
 materials: vellum, ink, parchment
 tTags: Schoolbook
-originalwork: 'From Manuscript to Print: the Evolution of the Medieval Book'
+originalwork: ''
 citeas: 'Medieval Manuscript Fragments #6532. Division of Rare and Manuscript Collections
   Cornell University Library.'
 repository: Division of Rare and Manuscript Collections_Cornell University Library
