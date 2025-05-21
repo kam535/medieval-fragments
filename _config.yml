@@ -149,7 +149,7 @@ lunr_settings:
   view_facets: 5
 
 
-  collections:
+collections:
   exhibits:
     output: true
   medievalfragments: # name of collection
