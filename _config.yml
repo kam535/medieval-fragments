@@ -132,6 +132,7 @@ collections:
   medievalfragments: # name of collection
     output: true # makes sure pages are output as html files
     layout: 'medfrag_item' # the layout for the pages to use
+    permalink: '/medievalfragments/:path'
     metadata:
       source: 'medievalfragments.csv' # path to the metadata file within `_data`
     images:
