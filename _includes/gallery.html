@@ -20,13 +20,14 @@
 
 {% comment %}- END SUBSET PARSING -{% endcomment%}
 
-{% comment %} :::: FACETS :::: {% endcomment%}
 
+<!-- THE GALLERY -->
+    
+<div class="wax-gallery-container full-width" id="wax-gallery-{{ include.value | slugify }}-container" >
 {% if include.facet_by %}
-  <form class="row" id="facets">
+  <form class="wax-inline-container" id="facets" position="absolute" width="auto">
     {% assign facet_list = include.facet_by | split: "|" %}
     {% for facet in facet_list %}
-      {% comment %}- MULTI-VALUE FACETS -{% endcomment%}
       {% if facet contains "*" %}
         {% assign facet_name = facet | remove: "*" %}
 
@@ -89,12 +90,6 @@
   </form>
 {% else %}
 {% endif %}
-
-{% comment %} :::: END FACETS :::: {% endcomment%}
-
-<!-- THE GALLERY -->
-    
-<div class="wax-gallery-container full-width" id="wax-gallery-{{ include.value | slugify }}-container" >
   <div class="wax-inline-container">
       <div class="wax-gallery" id="wax-gallery-{{ include.value | slugify }}">
         <div class="row">            
