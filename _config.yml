@@ -107,8 +107,7 @@ search:
           - originalwork
 
 lunr_settings:
-  lunr_settings:
-  atozsortfield: preferredName
+  atozsortfield: label
   collections:
     - medievalfragments
     - medievalwholes
