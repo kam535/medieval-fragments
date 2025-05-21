@@ -15,27 +15,24 @@ permalink: /deep-search/
  
 <form role="search">
 <div class="search-control" style="display:none;">
-    <input type="search" id="id-search" name="query"
+    <input type="search" id="object-search" name="query"
            placeholder="Keyword Search"
-           aria-label="Search people using keyword">
-    <input type="search" id="id-search" name="id"
-           placeholder="Search ID"
-           aria-label="Search people using id">
+           aria-label="Search objects using keyword">
     <select id="pidselect" name="pid"
       aria-label="Dropdown for pid">
-        <option value="">All titles</option>
+        <option value="">All pids</option>
         {% for pids in pids %}
-          {% if pids != '' %}
-          <option value="{{pids}}">{{pid}}</option>
+          {% if pid != '' %}
+          <option value="{{pid}}">{{pid}}</option>
           {% endif %}
         {% endfor %}
     </select>
-    <select multiple="multiple" size="10" id="occupationSelect" name="occupation"
+    <select multiple="multiple" size="10" id="titleSelect" name="title"
       aria-label="label search">
       <optgroup label="Titles">
         {% for label in labels %}
-          {% if labels != '' %}
-          <option value="{{labels}}">{{label}}</option>
+          {% if label != '' %}
+          <option value="{{label}}">{{label}}</option>
           {% endif %}
         {% endfor %}
       </optgroup>
@@ -44,11 +41,8 @@ permalink: /deep-search/
 </div>
 </form>
 <script>
-<script>
 window.addEventListener("load", function(){
     loadsearchtemplate();
     $('#spinner').hide();
-});
-</script>
 });
 </script>
