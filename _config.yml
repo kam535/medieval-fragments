@@ -165,7 +165,7 @@ menu:
   - label: 'Data'
     link: '/data/'
   - label: 'Deep Search'
-    link: '/deep-search/
+    link: '/deep-search/'
   - label: 'Exhibits'
     sub:
       - label: 'Bonaventure Lyffe of Chryste'
