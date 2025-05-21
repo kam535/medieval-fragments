@@ -46,8 +46,11 @@ permalink: /deep-search/
 </div>
 </form>
 <script>
+<script>
 window.addEventListener("load", function(){
-    loadsearchtemplate();
+    var dict = {facets: '#new_facet_field', pagination: '#paginationid', "results": ".results-class-override", settingsurl: "http://hostname.com/javascript/index.js"}
+    loadsearchtemplate(dict);
     $('#spinner').hide();
 });
+</script>
 </script>
