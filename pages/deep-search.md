@@ -1,3 +1,8 @@
+---
+layout: page
+title: Deep Search
+permalink: /deep-search/
+---
 
   <script src="{{site.baseurl}}/js/custom-search.js"></script>
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/custom-search.css">
