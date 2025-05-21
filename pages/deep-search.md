@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
+
   <script src="{{site.baseurl}}/js/custom-search.js"></script>
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/custom-search.css">
   <div id="spinner"><i class="fa fa-spinner fa-spin"></i></div>
   <script src="{{site.baseurl}}/js/index.js"></script>
-  </head>
-<body>
+
 {% assign pids = site.medievalfragments | map: "pid" | compact %}
 {% assign pids = pids | join: ','  | split: ','  | uniq | sort %}
 
@@ -49,5 +46,3 @@ window.addEventListener("load", function(){
     $('#spinner').hide();
 });
 </script>
-</body>
-</html>
