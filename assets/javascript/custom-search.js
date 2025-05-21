@@ -7735,7 +7735,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
             }
         });
     });
-}();function createSearch(values, origsearch_dict, sort, lunr_settings){
+}();function createSearch(values, origsearch_dict, sort, ings){
   var idx = lunr.Index.load(index);
   lunr.tokenizer.separator = /[\s,.;:/?!()]+/;
   idx.pipeline.remove(lunr.stemmer)
@@ -7934,7 +7934,7 @@ function loadsearchtemplate(settings){
 	    	return tmp;
 		}();
 	}
-  view_facets = lunr_settings['view_facets'] ? lunr_settings['view_facets'] : 4;
+  view_facets = site.lunr_settings['view_facets'] ? site.lunr_settings['view_facets'] : 4;
     var site_url = window.location.origin + window.location.pathname;
     var query = window.location.search.substring(1);
     if (query != ''){
