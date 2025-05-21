@@ -12,7 +12,7 @@
     <select id="pidselect" name="pid"
       aria-label="Dropdown for pid">
         <option value="">All pids</option>
-        {% for pids in pids %}
+        {% for pid in pids %}
           {% if pid != '' %}
           <option value="{{pid}}">{{pid}}</option>
           {% endif %}
