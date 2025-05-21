@@ -3,10 +3,9 @@ layout: page
 title: Deep Search
 permalink: /deep-search/
 ---
-
-  <script src="{{site.baseurl}}/assets/javascript/custom-search.js"></script>
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/custom-search.css">
-  <div id="spinner"><i class="fa fa-spinner fa-spin"></i></div>
+<script src="{{site.baseurl}}/assets/javascript/custom-search.js"></script>
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/custom-search.css">
+<div id="spinner"><i class="fa fa-spinner fa-spin"></i></div>
   
 {% assign pids = site.medievalfragments | map: "pid" | compact %}
 {% assign pids = pids | join: ','  | split: ','  | uniq | sort %}
@@ -45,11 +44,9 @@ permalink: /deep-search/
 </div>
 </form>
 <script>
-<script>
 window.addEventListener("load", function(){
     var dict = {facets: '#new_facet_field', pagination: '#paginationid', "results": ".results-class-override", settingsurl: "http://hostname.com/javascript/index.js"}
     loadsearchtemplate(dict);
     $('#spinner').hide();
 });
-</script>
 </script>
