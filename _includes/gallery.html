@@ -25,7 +25,7 @@
     
 <div class="wax-gallery-container full-width" id="wax-gallery-{{ include.value | slugify }}-container" >
 {% if include.facet_by %}
-  <form class="wax-inline-container" id="facets" position="absolute" width="auto">
+  <form class="wax-inline-container" id="facets" style="position: absolute;width: auto;">
     {% assign facet_list = include.facet_by | split: "|" %}
     {% for facet in facet_list %}
       {% if facet contains "*" %}
