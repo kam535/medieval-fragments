@@ -137,8 +137,10 @@ menu:
   - label: 'About'
     link: '/about/'
  
-  
-  
+
+plugins:
+  - jekyll-lunr-js-custom-search
+
 
 # --------------------------------------------------------------
 # SITE FOOTER SETTINGS
