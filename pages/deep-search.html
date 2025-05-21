@@ -12,7 +12,8 @@ permalink: /deep-search/
   
 <script>
 window.addEventListener("load", function(){
-    loadsearchtemplate();
+    var dict = {facets: '#new_facet_field', pagination: '#paginationid', "results": ".results-class-override", settingsurl: "https://kam535.github.io/medieval-fragments/search/index.json"}
+    loadsearchtemplate(dict);
     $('#spinner').hide();
 });
 </script>
