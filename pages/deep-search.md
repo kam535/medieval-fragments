@@ -5,9 +5,9 @@ permalink: /deep-search/
 ---
 
   <script src="{{site.baseurl}}/assets/javascript/custom-search.js"></script>
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/custom-search.css">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/custom-search.css">
   <div id="spinner"><i class="fa fa-spinner fa-spin"></i></div>
-  <script src="{{site.baseurl}}/js/index.js"></script>
+  <script src="{{site.baseurl}}/javascript/index.js"></script>
 
 {% assign pids = site.medievalfragments | map: "pid" | compact %}
 {% assign pids = pids | join: ','  | split: ','  | uniq | sort %}
