@@ -126,6 +126,30 @@ lunr_settings:
   view_facets: 5
 
 
+
+search:
+  main:
+    index: '/search/index.json' # file the index will get written to
+    collections:
+      medievalfragments:
+        content: false # whether or not to index page content
+        fields: # the metadata fields to index
+          - label
+          - agent
+          - dateStart
+          - dateEnd
+          - recnum
+          - catalogrecord
+          - collectionnum
+          - worktype
+          - tTags
+          - archcoll
+          - box
+          - folder
+          - rights
+          - bibliography
+          - originalwork
+
 collections:
   exhibits:
     output: true
