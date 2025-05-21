@@ -108,9 +108,7 @@ search:
 
 lunr_settings:
   atozsortfield: label
-  collections:
-    - medievalfragments
-    - medievalwholes
+  collections: [medievalfragments]
   displayfields:
   - {field: label, label: title, headerfield: true, highlight: false}
   - {field: thumbnail, headerimage: true, highlight: false}
