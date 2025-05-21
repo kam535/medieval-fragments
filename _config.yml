@@ -197,8 +197,6 @@ menu:
     link: '/about/'
  
 
-plugins:
-  - jekyll-lunr-js-custom-search
 
 
 # --------------------------------------------------------------
