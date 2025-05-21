@@ -2,7 +2,7 @@
 {% assign pids = pids | join: ','  | split: ','  | uniq | sort %}
 
 {% assign labels = site.medievalfragments | map: "label" | compact %}
-{% assign labels = labels | join: ','  | split: ','  | uniq | sort %}
+{% assign labels = labels | join: ';'  | split: ';'  | uniq | sort %}
  
 <form role="search">
 <div class="search-control" style="display:none;">
