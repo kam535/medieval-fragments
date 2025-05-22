@@ -252,3 +252,6 @@ layout: none
     "lunr_id": 23
   }
 ]
+
+var lunr_settings = {"atozsortfield":"label","collections":["medievalfragments"],"displayfields":[{"field":"label","headerfield":true,"highlight":false},{"field":"thumbnail","headerimage":true,"highlight":false},{"field":"location","label":"Location"},{"field":"worktype","worktype":"; ","label":"Type"},{"field":"dateStart","label":"Date"},{"field":"originalwork","label":"Original Work"},"fields":[{"boost":10,"facetfield":true,"jekyllfields":["pid"],"searchfield":"pid"},{"boost":10,"jekyllfields":["label"],"searchfield":"worktype"},{"boost":10,"facetfield":true,"jekyllfields":["location"],"searchfield":"location"},{"boost":1,"jekyllfields":["content"],"searchfield":"description"},"view_facets":5}
+
