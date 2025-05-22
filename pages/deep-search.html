@@ -35,6 +35,27 @@
 </div>
 </form>
 
+<div id="header_info"></div>
+<div style="float: left; width: 20%; ">
+  <div id="facets">
+  </div>
+</div>
+<div style="float: left; width: 80%; display: none; border: 1px solid #ccc" class="all_results">
+  <div id="search_results">
+    <div id="searchInfo">
+      <span id="number_results"></span>
+      <span id="sort_by" class="dropdownsort"><label for="sortSelect">Sort By:</label>
+        <select id="sortSelect" name="sort" onchange="changeSort(event);">
+          <option value="">Relevance</option>
+        </select>
+      </span>
+    </div>
+  </div>
+  <ul id="resultslist">
+  </ul>
+  <div id="pagination"></div>
+</div>
+
 <section id="search-results" style="display: none;"> </section>
 
 <script src="https://kam535.github.io/medieval-fragments/assets/javascript/custom-search.js" type="text/javascript" charset="utf-8"></script>
