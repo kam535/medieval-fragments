@@ -57,6 +57,27 @@ kramdown:
 # For more info, refer to:
 # ~> https://jekyllrb.com/docs/collections/
 
+
+collections:
+  exhibits:
+    output: true
+  medievalfragments: # name of collection
+    output: true # makes sure pages are output as html files
+    layout: 'medfrag_item' # the layout for the pages to use
+    permalink: '/medievalfragments/:path'
+    metadata:
+      source: 'medievalfragments.csv' # path to the metadata file within `_data`
+    images:
+      source: 'raw_images/medfragments' # path to the directory of images within `_data`
+  medievalwholes:
+    output: true
+    layout: 'medfrag_item'
+    metadata:
+      source: 'medievalwholes.csv'
+    images:
+      source: 'raw_images/medwholes'
+      
+
 plugins:
   - jekyll-lunr-js-custom-search
   
@@ -120,48 +141,6 @@ lunr_settings:
     widget: relational
   fuzzysearchfields: [name, birthplace, residences, worklocations]
   view_facets: 5
-
-search:
-  main:
-    index: '/search/index.json' # file the index will get written to
-    collections:
-      medievalfragments:
-        content: false # whether or not to index page content
-        fields: # the metadata fields to index
-          - label
-          - agent
-          - dateStart
-          - dateEnd
-          - recnum
-          - catalogrecord
-          - collectionnum
-          - worktype
-          - tTags
-          - archcoll
-          - box
-          - folder
-          - rights
-          - bibliography
-          - originalwork
-
-collections:
-  exhibits:
-    output: true
-  medievalfragments: # name of collection
-    output: true # makes sure pages are output as html files
-    layout: 'medfrag_item' # the layout for the pages to use
-    permalink: '/medievalfragments/:path'
-    metadata:
-      source: 'medievalfragments.csv' # path to the metadata file within `_data`
-    images:
-      source: 'raw_images/medfragments' # path to the directory of images within `_data`
-  medievalwholes:
-    output: true
-    layout: 'medfrag_item'
-    metadata:
-      source: 'medievalwholes.csv'
-    images:
-      source: 'raw_images/medwholes'
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
 # --------------------------------------------------------------
