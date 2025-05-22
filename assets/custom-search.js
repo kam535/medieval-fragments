@@ -7735,7 +7735,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
             }
         });
     });
-}();function createSearch(values, origsearch_dict, sort, {{data.lunr_settings}}){
+}();function createSearch(values, origsearch_dict, sort, {{ site.data.lunr_settings | jsonify }}){
   var idx = lunr.Index.load(index);
   lunr.tokenizer.separator = /[\s,.;:/?!()]+/;
   idx.pipeline.remove(lunr.stemmer)
@@ -7749,7 +7749,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
     for(var i in search_dict) {
       var presence = search_dict[i].constructor.name == 'Array' ? lunr.Query.presence.OPTIONAL : lunr.Query.presence.REQUIRED;
       lunr.tokenizer(search_dict[i]).forEach(function(token) {
-        if({{data.lunr_settings}}['fuzzysearchfields'].includes(i)) {
+        if({{ site.data.lunr_settings | jsonify }}['fuzzysearchfields'].includes(i)) {
           query.term(lunr.tokenizer(token), {fields: [i], editDistance: 1, presence: presence})
         } else if (i == "query" || i == "q"){
           if (token.toString().length > 1){
@@ -7768,7 +7768,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
 }
   var all_results = {}
   var highlight_display = {}
-  var mapfields =   new Map({{data.lunr_settings}}['fields'].map(item => !item.widget ? [item.searchfield, item.jekyllfields[0]] : []))
+  var mapfields =   new Map{{ site.data.lunr_settings | jsonify }}['fields'].map(item => !item.widget ? [item.searchfield, item.jekyllfields[0]] : []))
   mapfields.forEach ((v,k) => { highlight_display[k] = v })
   for (var i=0; i<results.length; i++){
     var dictionary = values[results[i].ref]
@@ -7807,9 +7807,9 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
       sort = split[0]
       ascdesc = split[1]
     }   
-    var sort_field = sort == 'atoz' ? {{data.lunr_settings}}['atozsortfield'] : sort;
+    var sort_field = sort == 'atoz' ? {{ site.data.lunr_settings | jsonify }}['atozsortfield'] : sort;
     var sorted = _.sortBy(Object.values(all_results), function(item) {
-     return [String(item[sort_field]).normalize('NFD'), String(item[{{data.lunr_settings}}['atozsortfield']]).normalize('NFD')];
+     return [String(item[sort_field]).normalize('NFD'), String(item[{{ site.data.lunr_settings | jsonify }}['atozsortfield']]).normalize('NFD')];
     })
     if (ascdesc == 'desc'){
       sorted = sorted.reverse();
@@ -7841,7 +7841,7 @@ function remove_facet(facet){
 
 function simpleTemplating(data, values, settings) {
   var html = '';
-  var disp_settings = {{data.lunr_settings}}['displayfields']
+  var disp_settings = ['displayfields']
   $.each(data, function(index, key){
     var exclude = ['headerimage', 'contentfield', 'headerfield']
     var header_field = disp_settings.filter(element => element['headerfield'] == true)[0]['field'];
@@ -7934,7 +7934,7 @@ function loadsearchtemplate(settings){
 	    	return tmp;
 		}();
 	}
-  view_facets = {{data.lunr_settings}}['view_facets'] ? {{data.lunr_settings}}['view_facets'] : 4;
+  view_facets = {{ site.data.lunr_settings | jsonify }}['view_facets'] ? {{ site.data.lunr_settings | jsonify }}['view_facets'] : 4;
     var site_url = window.location.origin + window.location.pathname;
     var query = window.location.search.substring(1);
     if (query != ''){
@@ -7967,7 +7967,7 @@ function loadsearchtemplate(settings){
         }
       }
       
-      values = createSearch(docs, pairs, sort_type, {{data.lunr_settings}})
+      values = createSearch(docs, pairs, sort_type, {{ site.data.lunr_settings | jsonify }})
       var current_page = localStorage['currentpage'] ? localStorage['currentpage'] : 1;
       var is_reload = localStorage['currenturl'] == window.location.href
       try {
