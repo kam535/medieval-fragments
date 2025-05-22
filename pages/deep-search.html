@@ -11,10 +11,3 @@ permalink: /deep-search/
 {% include search_form.html %}
 {% include results_template.html %}
   
-<script>
-window.addEventListener("load", function(){
-    var dict = {facets: '#new_facet_field', pagination: '#paginationid', "results": ".results-class-override", settingsurl: "https://kam535.github.io/medieval-fragments/search/index.json"}
-    loadsearchtemplate(dict);
-    $('#spinner').hide();
-});
-</script>
