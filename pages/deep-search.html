@@ -1,3 +1,38 @@
+{% assign label = site.medievalfragments | map: "label" | compact %}
+{% assign labels = labels | join: ';'  | split: ';'  | uniq | sort %}
 
+{% assign worktype = site.medievalfragments | map: "worktype" | compact %}
+{% assign worktypes = worktypes | join: ';'  | split: ';'  | uniq | sort %}
+ 
+<form role="search">
+<div class="search-control" style="display:none;">
+    <input type="search" id="person-serarch" name="query"
+           placeholder="Keyword Search"
+           aria-label="Search works using keyword">
+    <input type="search" id="label-search" name="title"
+           placeholder="Search Title"
+           aria-label="Search people using title">
+    <select id="titleselect" name="title"
+      aria-label="Dropdown for workstype">
+        <option value="">All labels</option>
+        {% for label in labels %}
+          {% if label != '' %}
+          <option value="{{label}}">{{label}}</option>
+          {% endif %}
+        {% endfor %}
+    </select>
+    <select multiple="multiple" size="10" id="worktypeSelect" name="worktype"
+      aria-label="worktype search">
+      <optgroup label="Worktypes">
+        {% for worktype in worktypes %}
+          {% if worktype != '' %}
+          <option value="{{worktype}}">{{worktype}}</option>
+          {% endif %}
+        {% endfor %}
+      </optgroup>
+    </select>
+    <button class="custom_button" style="float: right;">Search</button>
+</div>
+</form>
 
 <script src="assets/javascript/custom-search.js" type="text/javascript" charset="utf-8"></script>
