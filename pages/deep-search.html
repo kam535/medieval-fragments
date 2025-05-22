@@ -2,35 +2,35 @@
 permalink: "/deep-search/"
 ---
 
+{% assign pid = site.medievalfragments | map: "pid" | compact %}
+{% assign pids = pids | join: ','  | split: ','  | uniq | sort %}
+
 {% assign label = site.medievalfragments | map: "label" | compact %}
 {% assign labels = labels | join: ';'  | split: ';'  | uniq | sort %}
-
-{% assign worktype = site.medievalfragments | map: "worktype" | compact %}
-{% assign worktypes = worktypes | join: ';'  | split: ';'  | uniq | sort %}
  
 <form role="search">
 <div class="search-control" style="display:none;">
-    <input type="search" id="person-serarch" name="query"
+    <input type="search" id="keyword-search" name="query"
            placeholder="Keyword Search"
            aria-label="Search works using keyword">
-    <input type="search" id="label-search" name="title"
-           placeholder="Search Title"
-           aria-label="Search people using title">
-    <select id="titleselect" name="title"
-      aria-label="Dropdown for workstype">
-        <option value="">All labels</option>
-        {% for label in labels %}
-          {% if label != '' %}
-          <option value="{{label}}">{{label}}</option>
+    <input type="search" id="pid-search" name="pid"
+           placeholder="Search ID"
+           aria-label="Search objects using ID">
+    <select id="pidselect" name="pid"
+      aria-label="Dropdown for pid">
+        <option value="">All IDs</option>
+        {% for pid in pids %}
+          {% if pid != '' %}
+          <option value="{{pid}}">{{pids}}</option>
           {% endif %}
         {% endfor %}
     </select>
-    <select multiple="multiple" size="10" id="worktypeSelect" name="worktype"
-      aria-label="worktype search">
+    <select multiple="multiple" size="10" id="labelSelect" name="label"
+      aria-label="label search">
       <optgroup label="Worktypes">
-        {% for worktype in worktypes %}
-          {% if worktype != '' %}
-          <option value="{{worktype}}">{{worktype}}</option>
+        {% for label in labels %}
+          {% if label != '' %}
+          <option value="{{label}}">{{label}}</option>
           {% endif %}
         {% endfor %}
       </optgroup>
@@ -60,7 +60,6 @@ permalink: "/deep-search/"
   <div id="pagination"></div>
 </div>
 
-<section id="search-results" style="display: none;"> </section>
 
  <script>
 window.addEventListener("load", function(){
