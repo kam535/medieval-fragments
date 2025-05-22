@@ -11,3 +11,9 @@ permalink: /deep-search/
 {% include search_form.html %}
 {% include results_template.html %}
   
+<script>
+window.addEventListener("load", function(){
+    loadsearchtemplate();
+    $('#spinner').hide();
+});
+</script>
