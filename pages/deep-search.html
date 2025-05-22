@@ -18,7 +18,7 @@ permalink: "/deep-search/"
     <input type="search" id="pid-search" name="pid"
            placeholder="Search ID"
            aria-label="Search objects using ID">
-    <select id="pidselect" name="pid"
+    <select id="pidselect" name="id"
       aria-label="Dropdown for pid">
         <option value="">All IDs</option>
         {% for pid in pids %}
@@ -29,7 +29,7 @@ permalink: "/deep-search/"
     </select>
     <select multiple="multiple" size="10" id="labelSelect" name="label"
       aria-label="label search">
-      <optgroup label="Worktypes">
+      <optgroup label="Titles">
         {% for label in labels %}
           {% if label != '' %}
           <option value="{{label}}">{{label}}</option>
