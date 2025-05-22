@@ -102,47 +102,47 @@ lunr_settings:
    - {conditional: 'True', field: works, joiner: '; ', label: Work}
  fields:
    - boost: 10
-   facetfield: true
-   jekyllfields: [pid]
-   searchfield: id
+     facetfield: true
+     jekyllfields: [pid]
+     searchfield: id
    - boost: 10
-   jekyllfields: [label]
-   searchfield: title
+     jekyllfields: [label]
+     searchfield: title
    - boost: 10
-   facetfield: true
-   jekyllfields: [location]
-   searchfield: location
+     facetfield: true
+     jekyllfields: [location]
+     searchfield: location
    - boost: 1
-   jekyllfields: [agent]
-   searchfield: creator
+     jekyllfields: [agent]
+     searchfield: creator
    - boost: 1
-   jekyllfields: [dateStart]
-   searchfield: date
+     jekyllfields: [dateStart]
+     searchfield: date
    - boost: 10
-   jekyllfields: [dateEnd]
-   searchfield: dateEnd
+     jekyllfields: [dateEnd]
+     searchfield: dateEnd
    - boost: 10
-   facetfield: true
-   jekyllfields: [worktype]
-   searchfield: type
+     facetfield: true
+     jekyllfields: [worktype]
+     searchfield: type
    - boost: 10
-   facetfield: true
-   jekyllfields: [materials]
-   searchfield: medium
+     facetfield: true
+     jekyllfields: [materials]
+     searchfield: medium
    - boost: 10
-   facetfield: true
-   jekyllfields: [materials]
-   searchfield: medium
+     facetfield: true
+     jekyllfields: [materials]
+     searchfield: medium
    - boost: 10
-   facetfield: true
-   jekyllfields: [originalwork]
-   searchfield: medium
+     facetfield: true
+     jekyllfields: [originalwork]
+     searchfield: medium
    - boost: 10
-   facetfield: true
-   jekyllfields: [repository]
-   searchfield: repository
-  fuzzysearchfields: [title, agent, tTags, originalwork]
-  view_facets: 5
+     facetfield: true
+     jekyllfields: [repository]
+     searchfield: repository
+fuzzysearchfields: [title, agent, tTags, originalwork]
+view_facets: 5
 
 search:
   main:
