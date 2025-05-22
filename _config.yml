@@ -88,62 +88,6 @@ collections:
 # an `index` file to write it to and some `collections` for it to index
 # and running `$ bundle exec rake wax:search` .
 
-lunr_settings:
-  atozsortfield: label
-  collections: [medievalfragments]
-  displayfields:
-  - {field: label, label: title, headerfield: true, highlight: false}
-  - {field: thumbnail, headerimage: true, highlight: false}
-  - {field: agent, label: Creator}
-  - {field: location, joiner: '; ', label: Location}
-  - {field: dateStart, label: Date}
-  - {field: worktype, label: Type, plural: Types}
-  - {field: tTages, joiner: ', ', label: Subjects}
-  - {field: repository, label: Repository}
-  - {conditional: 'True', field: works, joiner: '; ', label: Work}
-  fields:
-  - boost: 10
-    facetfield: true
-    jekyllfields: [pid]
-    searchfield: id
-  - boost: 10
-    jekyllfields: [label]
-    searchfield: title
-  - boost: 10
-    facetfield: true
-    jekyllfields: [location]
-    searchfield: location
-  - boost: 1
-    jekyllfields: [agent]
-    searchfield: creator
-  - boost: 1
-    jekyllfields: [dateStart]
-    searchfield: date
-  - boost: 10
-    jekyllfields: [dateEnd]
-    searchfield: dateEnd
-  - boost: 10
-    facetfield: true
-    jekyllfields: [worktype]
-    searchfield: type
-  - boost: 10
-    facetfield: true
-    jekyllfields: [materials]
-    searchfield: medium
-  - boost: 10
-    facetfield: true
-    jekyllfields: [materials]
-    searchfield: medium
-  - boost: 10
-    facetfield: true
-    jekyllfields: [originalwork]
-    searchfield: medium
-  - boost: 10
-    facetfield: true
-    jekyllfields: [repository]
-    searchfield: repository
-  fuzzysearchfields: [title, agent, tTags, originalwork]
-  view_facets: 5
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
 # --------------------------------------------------------------
