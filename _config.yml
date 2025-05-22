@@ -87,25 +87,6 @@ collections:
 # an `index` file to write it to and some `collections` for it to index
 # and running `$ bundle exec rake wax:search` .
 
-
-search:
-  main:
-    index: '/search/index.json' # file the index will get written to
-      collections:
-        medievalfragments:
-        content: false # whether or not to index page content
-        fields: # the metadata fields to index
-        - label
-        - agent
-        - dateStart
-        - dateEnd
-        - recnum
-        - catalogrecord
-        - collectionnum
-        - worktype
-        - tTags
-        - archcoll
-
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
 # --------------------------------------------------------------
