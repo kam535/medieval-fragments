@@ -78,71 +78,7 @@ collections:
       source: 'medievalwholes.csv'
     images:
       source: 'raw_images/medwholes'
-      
-  
-# --------------------------------------------------------------
-# SEARCH INDEX SETTINGS
-# --------------------------------------------------------------
-# You can create multiple search indexes below (though only one is
-# recommended!) by specifying
-# an `index` file to write it to and some `collections` for it to index
-# and running `$ bundle exec rake wax:search` .
-# and running `$ bundle exec rake wax:search` .
-default_thumb:    '/img/default.png'
-metadata: 'medievalfragments'
-
-# ---------------------------------------------------------------
-# BUILD SETTINGS
-# ---------------------------------------------------------------
-# Best not to mess with these unless you know what you're doing!
-
-permalink: 'pretty'
-sass:
-style: compressed
-exclude: ["Gemfile*", "*.gemspec", "Rakefile", "vendor", "spec", "README.md", "LICENSE.txt", "Docker*"]
-webrick:
-headers:
-'Access-Control-Allow-Origin': '*'
-kramdown:
-auto_ids:       true
-footnote_nr:    1
-entity_output:  as_char
-footnote_backlink: "&#x21a9;&#xfe0e;"
-toc_levels:     1..6
-smart_quotes:   lsquo,rsquo,ldquo,rdquo
-enable_coderay: false
-
-
-# --------------------------------------------------------------
-# COLLECTION SETTINGS
-# --------------------------------------------------------------
-# Wax leverages Jekyll collections for much of its
-# functionality, therefor some of the keys below are from
-# Jekyll while others are Wax-specific.
-# For more info, refer to:
-# ~> https://jekyllrb.com/docs/collections/
-
-
-collections:
-exhibits:
-output: true
-medievalfragments: # name of collection
-output: true # makes sure pages are output as html files
-layout: 'medfrag_item' # the layout for the pages to use
-permalink: '/medievalfragments/:path'
-metadata:
-source: 'medievalfragments.csv' # path to the metadata file within `_data`
-images:
-source: 'raw_images/medfragments' # path to the directory of images within `_data`
-medievalwholes:
-output: true
-layout: 'medfrag_item'
-metadata:
-source: 'medievalwholes.csv'
-images:
-source: 'raw_images/medwholes'
-
-
+    
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
 # --------------------------------------------------------------
@@ -152,79 +88,79 @@ source: 'raw_images/medwholes'
 # and running `$ bundle exec rake wax:search` .
 
 lunr_settings:
-atozsortfield: label
-collections: [medievalfragments]
-displayfields:
-- {field: label, label: title, headerfield: true, highlight: false}
-- {field: thumbnail, headerimage: true, highlight: false}
-- {field: agent, label: Creator}
-- {field: location, joiner: '; ', label: Location}
-- {field: dateStart, label: Date}
-- {field: worktype, label: Type, plural: Types}
-- {field: tTages, joiner: ', ', label: Subjects}
-- {field: repository, label: Repository}
-- {conditional: 'True', field: works, joiner: '; ', label: Work}
-fields:
-- boost: 10
-facetfield: true
-jekyllfields: [pid]
-searchfield: id
-- boost: 10
-jekyllfields: [label]
-searchfield: title
-- boost: 10
-facetfield: true
-jekyllfields: [location]
-searchfield: location
-- boost: 1
-jekyllfields: [agent]
-searchfield: creator
-- boost: 1
-jekyllfields: [dateStart]
-searchfield: date
-- boost: 10
-jekyllfields: [dateEnd]
-searchfield: dateEnd
-- boost: 10
-facetfield: true
-jekyllfields: [worktype]
-searchfield: type
-- boost: 10
-facetfield: true
-jekyllfields: [materials]
-searchfield: medium
-- boost: 10
-facetfield: true
-jekyllfields: [materials]
-searchfield: medium
-- boost: 10
-facetfield: true
-jekyllfields: [originalwork]
-searchfield: medium
-- boost: 10
-facetfield: true
-jekyllfields: [repository]
-searchfield: repository
-fuzzysearchfields: [title, agent, tTags, originalwork]
-view_facets: 5
+ atozsortfield: label
+ collections: [medievalfragments]
+ displayfields:
+   - {field: label, label: title, headerfield: true, highlight: false}
+   - {field: thumbnail, headerimage: true, highlight: false}
+   - {field: agent, label: Creator}
+   - {field: location, joiner: '; ', label: Location}
+   - {field: dateStart, label: Date}
+   - {field: worktype, label: Type, plural: Types}
+   - {field: tTages, joiner: ', ', label: Subjects}
+   - {field: repository, label: Repository}
+   - {conditional: 'True', field: works, joiner: '; ', label: Work}
+ fields:
+   - boost: 10
+   facetfield: true
+   jekyllfields: [pid]
+   searchfield: id
+   - boost: 10
+   jekyllfields: [label]
+   searchfield: title
+   - boost: 10
+   facetfield: true
+   jekyllfields: [location]
+   searchfield: location
+   - boost: 1
+   jekyllfields: [agent]
+   searchfield: creator
+   - boost: 1
+   jekyllfields: [dateStart]
+   searchfield: date
+   - boost: 10
+   jekyllfields: [dateEnd]
+   searchfield: dateEnd
+   - boost: 10
+   facetfield: true
+   jekyllfields: [worktype]
+   searchfield: type
+   - boost: 10
+   facetfield: true
+   jekyllfields: [materials]
+   searchfield: medium
+   - boost: 10
+   facetfield: true
+   jekyllfields: [materials]
+   searchfield: medium
+   - boost: 10
+   facetfield: true
+   jekyllfields: [originalwork]
+   searchfield: medium
+   - boost: 10
+   facetfield: true
+   jekyllfields: [repository]
+   searchfield: repository
+  fuzzysearchfields: [title, agent, tTags, originalwork]
+  view_facets: 5
 
 search:
-main:
-index: '/search/index.json' # file the index will get written to
-collections:
-medievalfragments:
-content: false # whether or not to index page content
-fields: # the metadata fields to index
-- label
-- agent
-- dateStart
-- dateEnd
-- recnum
-- catalogrecord
-- collectionnum
-- worktype
-- tTags
-- archcoll
+  main:
+    index: '/search/index.json' # file the index will get written to
+      collections:
+        medievalfragments:
+        content: false # whether or not to index page content
+        fields: # the metadata fields to index
+        - label
+        - agent
+        - dateStart
+        - dateEnd
+        - recnum
+        - catalogrecord
+        - collectionnum
+        - worktype
+        - tTags
+        - archcoll
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
