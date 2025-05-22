@@ -7,6 +7,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
  * Copyright (C) 2020 Oliver Nightingale
  * @license MIT
  */
+var lunr_settings = {"atozsortfield":"label","collections":["medievalfragments"],"displayfields":[{"field":"label","headerfield":true,"highlight":false},{"field":"thumbnail","headerimage":true,"highlight":false},{"field":"location","label":"Location"},{"field":"worktype","worktype":"; ","label":"Type"},{"field":"dateStart","label":"Date"},{"field":"originalwork","label":"Original Work"},"fields":[{"boost":10,"facetfield":true,"jekyllfields":["pid"],"searchfield":"pid"},{"boost":10,"jekyllfields":["label"],"searchfield":"worktype"},{"boost":10,"facetfield":true,"jekyllfields":["location"],"searchfield":"location"},{"boost":1,"jekyllfields":["content"],"searchfield":"description"},"view_facets":5}
 
 ;(function(){
 
