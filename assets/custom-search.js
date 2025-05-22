@@ -7735,7 +7735,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
             }
         });
     });
-}();function createSearch(values, origsearch_dict, sort, config.lunr_settings){
+}();function createSearch(values, origsearch_dict, sort, lunr_settings){
   var idx = lunr.Index.load(index);
   lunr.tokenizer.separator = /[\s,.;:/?!()]+/;
   idx.pipeline.remove(lunr.stemmer)
@@ -7749,7 +7749,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
     for(var i in search_dict) {
       var presence = search_dict[i].constructor.name == 'Array' ? lunr.Query.presence.OPTIONAL : lunr.Query.presence.REQUIRED;
       lunr.tokenizer(search_dict[i]).forEach(function(token) {
-        if(config.lunr_settings['fuzzysearchfields'].includes(i)) {
+        if(lunr_settings['fuzzysearchfields'].includes(i)) {
           query.term(lunr.tokenizer(token), {fields: [i], editDistance: 1, presence: presence})
         } else if (i == "query" || i == "q"){
           if (token.toString().length > 1){
@@ -7768,7 +7768,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
 }
   var all_results = {}
   var highlight_display = {}
-  var mapfields =   new Map(config.lunr_settings['fields'].map(item => !item.widget ? [item.searchfield, item.jekyllfields[0]] : []))
+  var mapfields =   new Map(lunr_settings['fields'].map(item => !item.widget ? [item.searchfield, item.jekyllfields[0]] : []))
   mapfields.forEach ((v,k) => { highlight_display[k] = v })
   for (var i=0; i<results.length; i++){
     var dictionary = values[results[i].ref]
@@ -7777,7 +7777,7 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
       for (var field in matchMeta[matchvalue]){
         var getorigkey = Object.keys(origsearch_dict).find(orig_key => origsearch_dict[orig_key].toString().toLowerCase().includes(matchvalue))
         getorigkey = getorigkey != undefined ? getorigkey : '';
-        nohighlight = config.lunr_settings['displayfields'].filter(element => element['highlight'] == false).map(x => x['field'])
+        nohighlight = lunr_settings['displayfields'].filter(element => element['highlight'] == false).map(x => x['field'])
         if (matchvalue.length > 1 && getorigkey.indexOf("facet") == -1) {
           if (Object.keys(highlight_display).indexOf(field) > -1){
             field = highlight_display[field]
@@ -7807,9 +7807,9 @@ Z.prototype.chain=tf,Z.prototype.commit=rf,Z.prototype.next=ef,Z.prototype.plant
       sort = split[0]
       ascdesc = split[1]
     }   
-    var sort_field = sort == 'atoz' ? config.lunr_settings['atozsortfield'] : sort;
+    var sort_field = sort == 'atoz' ? lunr_settings['atozsortfield'] : sort;
     var sorted = _.sortBy(Object.values(all_results), function(item) {
-     return [String(item[sort_field]).normalize('NFD'), String(item[config.lunr_settings['atozsortfield']]).normalize('NFD')];
+     return [String(item[sort_field]).normalize('NFD'), String(item[lunr_settings['atozsortfield']]).normalize('NFD')];
     })
     if (ascdesc == 'desc'){
       sorted = sorted.reverse();
@@ -7841,7 +7841,7 @@ function remove_facet(facet){
 
 function simpleTemplating(data, values, settings) {
   var html = '';
-  var disp_settings = config.lunr_settings['displayfields']
+  var disp_settings = lunr_settings['displayfields']
   $.each(data, function(index, key){
     var exclude = ['headerimage', 'contentfield', 'headerfield']
     var header_field = disp_settings.filter(element => element['headerfield'] == true)[0]['field'];
@@ -7934,7 +7934,7 @@ function loadsearchtemplate(settings){
 	    	return tmp;
 		}();
 	}
-  view_facets = config.lunr_settings['view_facets'] ? config.lunr_settings['view_facets'] : 4;
+  view_facets = lunr_settings['view_facets'] ? lunr_settings['view_facets'] : 4;
     var site_url = window.location.origin + window.location.pathname;
     var query = window.location.search.substring(1);
     if (query != ''){
@@ -7967,7 +7967,7 @@ function loadsearchtemplate(settings){
         }
       }
       
-      values = createSearch(docs, pairs, sort_type, config.lunr_settings)
+      values = createSearch(docs, pairs, sort_type, lunr_settings)
       var current_page = localStorage['currentpage'] ? localStorage['currentpage'] : 1;
       var is_reload = localStorage['currenturl'] == window.location.href
       try {
