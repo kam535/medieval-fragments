@@ -90,56 +90,60 @@ plugins:
 # and running `$ bundle exec rake wax:search` .
 
 lunr_settings:
-  collections:
-    - medievalfragments
-  atozsortfield: preferredName
+  atozsortfield: label
+  collections: [medievalfragments]
   displayfields:
-  - {field: preferredName, headerfield: true, highlight: false}
-  - {field: imagesrc, headerimage: true, highlight: false}
-  - {field: variantNames, label: Variant Name}
-  - {field: occupation, joiner: '; ', label: Occupation, truncate: 2}
-  - {field: born, label: Birth Year}
-  - {field: ethnicity, label: Ethnicity, plural: Ethnicities}
+  - {field: label, label: title, headerfield: true, highlight: false}
+  - {field: thumbnail, headerimage: true, highlight: false}
+  - {field: agent, label: Creator}
+  - {field: location, joiner: '; ', label: Location}
+  - {field: dateStart, label: Date}
+  - {field: worktype, label: Type, plural: Types}
+  - {field: tTages, joiner: ', ', label: Subjects}
+  - {field: repository, label: Repository}
   - {conditional: 'True', field: works, joiner: '; ', label: Work}
   fields:
   - boost: 10
     facetfield: true
-    jekyllfields: [ethnicity]
-    searchfield: ethnicity
+    jekyllfields: [pid]
+    searchfield: id
   - boost: 10
-    jekyllfields: [preferredName, variantNames]
-    searchfield: name
+    jekyllfields: [label]
+    searchfield: title
   - boost: 10
     facetfield: true
-    jekyllfields: [occupation]
-    searchfield: occupation
+    jekyllfields: [location]
+    searchfield: location
   - boost: 1
-    jekyllfields: [content]
-    searchfield: description
+    jekyllfields: [agent]
+    searchfield: creator
   - boost: 1
-    jekyllfields: [contributions]
-    searchfield: contributor
-    widget: flatten
+    jekyllfields: [dateStart]
+    searchfield: date
+  - boost: 10
+    jekyllfields: [dateEnd]
+    searchfield: dateEnd
   - boost: 10
     facetfield: true
-    jekyllfields: [wlCity]
-    parentfield: workLocations
-    searchfield: cities
-    widget: nested
+    jekyllfields: [worktype]
+    searchfield: type
   - boost: 10
     facetfield: true
-    jekyllfields: [wlCountry]
-    parentfield: workLocations
-    searchfield: countries
-    widget: nested
+    jekyllfields: [materials]
+    searchfield: medium
   - boost: 10
-    collection: works
-    jekyllfields: [preferredName, variantName]
-    matchfield: contributor
-    searchfield: works
-    secondaryfield: contributorId
-    widget: relational
-  fuzzysearchfields: [name, birthplace, residences, worklocations]
+    facetfield: true
+    jekyllfields: [materials]
+    searchfield: medium
+  - boost: 10
+    facetfield: true
+    jekyllfields: [originalwork]
+    searchfield: medium
+  - boost: 10
+    facetfield: true
+    jekyllfields: [repository]
+    searchfield: repository
+  fuzzysearchfields: [title, agent, tTags, originalwork]
   view_facets: 5
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
