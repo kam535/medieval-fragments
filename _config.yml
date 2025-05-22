@@ -77,9 +77,6 @@ collections:
     images:
       source: 'raw_images/medwholes'
       
-
-plugins:
-  - jekyll-lunr-js-custom-search
   
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
