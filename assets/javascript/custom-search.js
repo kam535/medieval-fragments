@@ -7934,7 +7934,7 @@ function loadsearchtemplate(settings){
 	    	return tmp;
 		}();
 	}
-  view_facets = lunr_settings['view_facets'] ? lunr_settings['view_facets'] : 4;;
+  view_facets = 4;
     var site_url = window.location.origin + window.location.pathname;
     var query = window.location.search.substring(1);
     if (query != ''){
