@@ -79,38 +79,6 @@ collections:
     images:
       source: 'raw_images/medwholes'
     
-# --------------------------------------------------------------
-# SEARCH INDEX SETTINGS
-# --------------------------------------------------------------
-# You can create multiple search indexes below (though only one is
-# recommended!) by specifying
-# an `index` file to write it to and some `collections` for it to index
-# and running `$ bundle exec rake wax:search` .
-
-# --------------------------------------------------------------
-# SITE MENU SETTINGS
-# --------------------------------------------------------------
-# Each menu item needs a `label` (whats shown), and a `link`
-# (where it goes). An item can optionally have a dropdown
-# submenu via `sub`.
-collections:
-  exhibits:
-    output: true
-  medievalfragments: # name of collection
-    output: true # makes sure pages are output as html files
-    layout: 'medfrag_item' # the layout for the pages to use
-    permalink: '/medievalfragments/:path'
-    metadata:
-      source: 'medievalfragments.csv' # path to the metadata file within `_data`
-    images:
-      source: 'raw_images/medfragments' # path to the directory of images within `_data`
-  medievalwholes:
-    output: true
-    layout: 'medfrag_item'
-    metadata:
-      source: 'medievalwholes.csv'
-    images:
-      source: 'raw_images/medwholes'
       
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
@@ -176,6 +144,7 @@ lunr_settings:
     searchfield: repository
   fuzzysearchfields: [title, agent, tTags, originalwork]
   view_facets: 5
+  js_dir: "javascript"
 
 menu:
   - label: 'Browse'
