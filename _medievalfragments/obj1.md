@@ -30,4 +30,5 @@ layout: medfrag_item
 collection: medievalfragments
 thumbnail: "/img/derivatives/simple/obj1/thumbnail.jpg"
 full: "/img/derivatives/simple/obj1/fullwidth.jpg"
+img_src: "https://kam535.github.io/medieval-fragments/img/derivatives/simple/obj1/thumbnail.jpg"
 ---
