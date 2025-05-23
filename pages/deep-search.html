@@ -19,19 +19,16 @@ permalink: "/deep-search/"
     <input type="search" id="keyword-search" name="query"
            placeholder="Keyword Search"
            aria-label="Search works using keyword">
-    <input type="search" id="pid-search" name="pid"
-           placeholder="Search ID"
-           aria-label="Search objects using ID">
-    <select id="pidselect" name="pid"
+    <select id="pidselect" name="id"
       aria-label="Dropdown for pid">
-        <option value="">All IDs</option>
+        <option value="">All pids</option>
         {% for pid in pids %}
           {% if pid != '' %}
           <option value="{{pid}}">{{pids}}</option>
           {% endif %}
         {% endfor %}
     </select>
-    <select multiple="multiple" size="10" id="labelSelect" name="label"
+    <select multiple="multiple" size="10" id="titleSelect" name="title"
       aria-label="label search">
       <optgroup label="Titles">
         {% for label in labels %}
