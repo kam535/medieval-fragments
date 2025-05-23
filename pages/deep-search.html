@@ -13,34 +13,8 @@ permalink: "/deep-search/"
 
 {% assign label = site.medievalfragments | map: "label" | compact %}
 {% assign labels = labels | join: ';'  | split: ';'  | uniq | sort %}
- 
-<form role="search">
-<div class="search-control" style="display:none;">
-    <input type="search" id="keyword-search" name="query"
-           placeholder="Keyword Search"
-           aria-label="Search works using keyword">
-    <select id="pidselect" name="id"
-      aria-label="Dropdown for pid">
-        <option value="">All pids</option>
-        {% for pid in pids %}
-          {% if pid != '' %}
-          <option value="{{pid}}">{{pids}}</option>
-          {% endif %}
-        {% endfor %}
-    </select>
-    <select multiple="multiple" size="10" id="titleSelect" name="title"
-      aria-label="label search">
-      <optgroup label="Titles">
-        {% for label in labels %}
-          {% if label != '' %}
-          <option value="{{label}}">{{label}}</option>
-          {% endif %}
-        {% endfor %}
-      </optgroup>
-    </select>
-    <button class="custom_button" style="float: right;">Search</button>
-</div>
-</form>
+
+{% include search_form.html %}
 
 <div id="header_info"></div>
 <div style="float: left; width: 20%; ">
