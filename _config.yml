@@ -90,6 +90,7 @@ collections:
 
 lunr_settings:
   atozsortfield: label
+  js_dir: "assets/javascript"
   collections: [medievalfragments]
   displayfields:
   - {field: label, headerfield: true, highlight: false}
@@ -144,7 +145,6 @@ lunr_settings:
     searchfield: repository
   fuzzysearchfields: [title, agent, tTags, originalwork]
   view_facets: 5
-  js_dir: "javascript"
 
 menu:
   - label: 'Browse'
