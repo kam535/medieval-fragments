@@ -1,1 +1,0 @@
-var lunr_settings = 
