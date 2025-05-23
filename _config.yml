@@ -137,10 +137,10 @@ lunr_settings:
   - boost: 10
     facetfield: true
     jekyllfields: [pid]
-    searchfield: id
+    searchfield: pid
   - boost: 10
     jekyllfields: [label]
-    searchfield: title
+    searchfield: label
   - boost: 10
     facetfield: true
     jekyllfields: [location]
