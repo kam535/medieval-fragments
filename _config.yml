@@ -159,8 +159,6 @@ menu:
     link: '/map.html'
   - label: 'Data'
     link: '/data/'
-  - label: 'Deep Search'
-    link: '/deep-search/'
   - label: 'Exhibits'
     sub:
       - label: 'Bonaventure Lyffe of Chryste'
