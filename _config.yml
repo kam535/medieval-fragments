@@ -94,7 +94,7 @@ lunr_settings:
   collections: [medievalfragments]
   displayfields:
   - {field: label, headerfield: true, highlight: false}
-  - {field: img_src, headerimage: true, highlight: false}
+  - {field: thumbnail, headerimage: true, highlight: false}
   - {field: agent, label: Creator}
   - {field: location, joiner: '; ', label: Location}
   - {field: dateStart, label: Date}
